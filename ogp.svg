@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="veil" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   style="stop-color:#0a0503;stop-opacity:0.55"/>
+      <stop offset="45%"  style="stop-color:#0a0503;stop-opacity:0.30"/>
+      <stop offset="80%"  style="stop-color:#0a0503;stop-opacity:0.85"/>
+      <stop offset="100%" style="stop-color:#0a0503;stop-opacity:0.97"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#C9A84C"/>
+      <stop offset="50%"  style="stop-color:#F0D080"/>
+      <stop offset="100%" style="stop-color:#C9A84C"/>
+    </linearGradient>
+    <linearGradient id="goldV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   style="stop-color:#F0D080"/>
+      <stop offset="100%" style="stop-color:#8A6020"/>
+    </linearGradient>
+    <radialGradient id="ember" cx="30%" cy="20%" r="55%">
+      <stop offset="0%"   style="stop-color:#D4562A;stop-opacity:0.20"/>
+      <stop offset="60%"  style="stop-color:#D4562A;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 外観写真（背景全面） -->
+  <image href="./tengu_r3_c1.jpg" xlink:href="./tengu_r3_c1.jpg"
+         x="0" y="0" width="1200" height="630"
+         preserveAspectRatio="xMidYMid slice"/>
+
+  <!-- グラデーション暗幕 -->
+  <rect width="1200" height="630" fill="url(#veil)"/>
+  <rect width="1200" height="630" fill="url(#ember)"/>
+
+  <!-- ゴールド細枠 -->
+  <rect x="72"   y="72"    width="2"    height="486" fill="url(#goldV)" opacity="0.7"/>
+  <rect x="1126" y="72"    width="2"    height="486" fill="url(#goldV)" opacity="0.7"/>
+  <rect x="72"   y="72"    width="1056" height="1.5" fill="url(#gold)"  opacity="0.55"/>
+  <rect x="72"   y="556.5" width="1056" height="1.5" fill="url(#gold)"  opacity="0.55"/>
+
+  <!-- 四隅のアクセント -->
+  <rect x="72"   y="72"   width="32" height="2"  fill="#C9A84C"/>
+  <rect x="72"   y="72"   width="2"  height="32" fill="#C9A84C"/>
+  <rect x="1096" y="72"   width="32" height="2"  fill="#C9A84C"/>
+  <rect x="1126" y="72"   width="2"  height="32" fill="#C9A84C"/>
+  <rect x="72"   y="556"  width="32" height="2"  fill="#C9A84C"/>
+  <rect x="72"   y="526"  width="2"  height="32" fill="#C9A84C"/>
+  <rect x="1096" y="556"  width="32" height="2"  fill="#C9A84C"/>
+  <rect x="1126" y="526"  width="2"  height="32" fill="#C9A84C"/>
+
+  <!-- 上部区切り線 -->
+  <rect x="540" y="148" width="120" height="1" fill="url(#gold)" opacity="0.75"/>
+
+  <!-- 上部キャプション -->
+  <text x="600" y="188" font-family="Georgia, serif" font-size="14" fill="#C9A84C"
+        text-anchor="middle" letter-spacing="8" opacity="0.95">PREMIUM YAKINIKU · OKINAWA CITY</text>
+
+  <!-- メインタイポ -->
+  <text x="600" y="352" font-family="'Hiragino Mincho ProN', 'Yu Mincho', 'Shippori Mincho', serif"
+        font-size="128" fill="#F5E9D0" text-anchor="middle" letter-spacing="24" font-weight="500"
+        style="paint-order:stroke fill;stroke:rgba(0,0,0,0.35);stroke-width:1">焼 肉 天 狗</text>
+
+  <!-- 英字副 -->
+  <text x="600" y="410" font-family="Georgia, 'Times New Roman', serif" font-size="30"
+        fill="url(#gold)" text-anchor="middle" letter-spacing="14" font-weight="400"
+        font-style="italic">YAKINIKU TENGU</text>
+
+  <!-- 区切り -->
+  <rect x="440" y="440" width="320" height="1" fill="url(#gold)" opacity="0.55"/>
+
+  <!-- タグライン -->
+  <text x="600" y="482" font-family="'Hiragino Mincho ProN', 'Yu Mincho', serif" font-size="20"
+        fill="#F0D080" text-anchor="middle" letter-spacing="14" opacity="0.95"
+        style="paint-order:stroke fill;stroke:rgba(0,0,0,0.4);stroke-width:1">石 垣 牛　食 べ 放 題</text>
+
+  <!-- ドメイン -->
+  <text x="600" y="522" font-family="Georgia, serif" font-size="14"
+        fill="rgba(230,210,160,0.7)" text-anchor="middle" letter-spacing="4">yakiniku-tengu.search-mania.net</text>
+
+  <!-- 装飾ダイヤモンド -->
+  <polygon points="600,130 606,136 600,142 594,136" fill="#C9A84C" opacity="0.75"/>
+  <polygon points="600,540 604,544 600,548 596,544" fill="#C9A84C" opacity="0.5"/>
+</svg>

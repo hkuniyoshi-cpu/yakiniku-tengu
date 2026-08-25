@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# AI クローラー：ブログ・OGPを学習素材として許可（拒否したい場合は下記をDisallowに変更）
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://yakiniku-tengu.search-mania.net/sitemap.xml
