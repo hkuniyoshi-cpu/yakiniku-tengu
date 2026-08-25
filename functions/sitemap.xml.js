@@ -11,8 +11,8 @@ const GAS_URL = 'https://script.google.com/macros/s/AKfycbw9QjwJ0tkdU02zvh6My3Er
 
 export async function onRequest(context) {
   try {
-    // v2: cache-bust after GAS v11 slug fix. Bump this suffix to invalidate the edge cache.
-    const upstream = await fetch(GAS_URL + '?sitemap=1&v=2', {
+    // v3: cache-bust after GAS v12 path-URL format. Bump this suffix to invalidate the edge cache.
+    const upstream = await fetch(GAS_URL + '?sitemap=1&v=3', {
       redirect: 'follow',
       cf: { cacheTtl: 3600, cacheEverything: true },
     });

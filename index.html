@@ -850,7 +850,8 @@ function applyBlog(items){
     const rawUrl=String(b.url||'').replace(/\/+$/,'');
     const lastSeg=rawUrl.split('/').pop();
     const slug=(lastSeg&&lastSeg.length>=4)?lastSeg:(b.date||'');
-    const href=slug?`/blog/?post=${slug}&n=${i}`:null;
+    // パス型URL: /blog/{slug}/ を Cloudflare Pages Function がSSRで返す
+    const href=slug?`/blog/${encodeURIComponent(slug)}/`:null;
     const open=href?`<a href="${href}" class="blog-card">`:`<article class="blog-card" tabindex="0" data-idx="${i}">`;
     const close=href?'</a>':'</article>';
     return `${open}
