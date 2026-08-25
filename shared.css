@@ -345,6 +345,8 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
   margin-top:32px;font-family:var(--font-mincho);font-size:17px;
   line-height:2;letter-spacing:.1em;padding-left:22px;
   border-left:1px solid currentColor;font-style:italic;color:var(--current-sub,inherit);
+  text-wrap:balance;word-break:keep-all;overflow-wrap:normal;
+  max-width:32em;
 }
 
 /* Asymmetric 4-image grid — Trunk Hotel style
