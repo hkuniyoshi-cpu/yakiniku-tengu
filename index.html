@@ -829,6 +829,32 @@ function applyReviews(items){
     </a>`;
   }
   grid.innerHTML=html;
+  injectReviewsSchema(items);
+}
+/* 個別 Review JSON-LD を <head> に動的注入 — AggregateRating の裏付け */
+function injectReviewsSchema(items){
+  if(!Array.isArray(items)||!items.length) return;
+  const RESTAURANT_ID='https://yakiniku-tengu.search-mania.net/#restaurant';
+  const reviewsLd=items.slice(0,5).filter(r=>r&&r.text).map(r=>({
+    '@type':'Review',
+    'author':{'@type':'Person','name':String(r.name||'Anonymous')},
+    'datePublished':String(r.date||''),
+    'reviewBody':String(r.text||''),
+    'reviewRating':{'@type':'Rating','ratingValue':String(r.stars||5),'bestRating':'5','worstRating':'1'},
+    'publisher':{'@type':'Organization','name':'Google','url':'https://www.google.com/maps'},
+    'itemReviewed':{'@id':RESTAURANT_ID}
+  }));
+  if(!reviewsLd.length) return;
+  const doc={'@context':'https://schema.org','@graph':reviewsLd};
+  // 既存 script があれば置換、なければ head に追加
+  let sc=document.getElementById('reviews-ldjson');
+  if(!sc){
+    sc=document.createElement('script');
+    sc.type='application/ld+json';
+    sc.id='reviews-ldjson';
+    document.head.appendChild(sc);
+  }
+  sc.textContent=JSON.stringify(doc);
 }
 function applyBlog(items){
   const wall=document.querySelector('#blog .wall');
