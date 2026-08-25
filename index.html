@@ -846,8 +846,10 @@ function applyBlog(items){
     if(!raw&&b.date) raw=`${fmtDate(b.date)} の投稿`;
     const short=raw.length>44?raw.slice(0,44)+'…':raw;
     const imgUrl=driveImg(b.image);
-    const slugMatch=(b.url||'').match(/\/blog\/([^\/\?#]+)/);
-    const slug=slugMatch?slugMatch[1]:(b.date||'');
+    // Slug 抽出: F列 URL の末尾セグメント優先（"YYYY-MM-DD-HHMM/" 形式に対応）
+    const rawUrl=String(b.url||'').replace(/\/+$/,'');
+    const lastSeg=rawUrl.split('/').pop();
+    const slug=(lastSeg&&lastSeg.length>=4)?lastSeg:(b.date||'');
     const href=slug?`/blog/?post=${slug}&n=${i}`:null;
     const open=href?`<a href="${href}" class="blog-card">`:`<article class="blog-card" tabindex="0" data-idx="${i}">`;
     const close=href?'</a>':'</article>';
