@@ -15,6 +15,11 @@ NEXT-STEPS.md
 Screen Shot*.png
 screenshot*.png
 
+# Build / deploy tool artifacts
+_deploy/
+.wrangler/
+node_modules/
+
 # OS / editor
 .DS_Store
 Thumbs.db
