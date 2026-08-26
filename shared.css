@@ -264,7 +264,7 @@ button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit
 .rd-primary{border-color:var(--gold)}
 .rd-primary .rd-main{color:var(--white)}
 .rd-primary:hover .rd-main{color:var(--black)}
-.rd-ghost .rd-main{font-family:var(--font-en);font-style:italic;letter-spacing:.1em;font-size:13.5px}
+.rd-ghost .rd-main{font-family:var(--font-en);font-style:italic;letter-spacing:.04em;font-size:17px;font-variant-numeric:tabular-nums;font-weight:500}
 @media (max-width:900px){
   .c-reserve-dock{bottom:0;right:0;left:0;flex-direction:row;gap:0;align-items:stretch;padding:0}
   .rd-btn{flex:1;min-width:0;padding:16px 12px;gap:8px;border:0;border-top:1px solid rgba(201,168,76,.55);border-radius:0;justify-content:center}
