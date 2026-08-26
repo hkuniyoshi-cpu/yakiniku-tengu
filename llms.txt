@@ -9,8 +9,7 @@
 - **Category:** Premium yakiniku (Japanese BBQ) restaurant
 - **Address:** 1-1-5 Moromizato, Okinawa City, Okinawa Prefecture 904-0032, Japan (〒904-0032 沖縄県沖縄市諸見里1-1-5 1F)
 - **Phone:** +81-98-930-1128 (098-930-1128)
-- **Hours (dinner):** 17:00 – 23:00 daily except Wednesdays
-- **Hours (lunch, Sat & Sun only):** 12:00 – 15:00
+- **Hours:** 17:00 – 23:00 daily except Wednesdays
 - **Closed:** Wednesdays
 - **Parking:** Free — 14 spaces (4 surface + 10 underground)
 - **Payment:** All major credit cards, IC cards (Suica/PASMO), QR (PayPay/RakutenPay/dPay), UnionPay
